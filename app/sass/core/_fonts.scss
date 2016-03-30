@@ -1,0 +1,46 @@
+@include font-face(
+	'OpenSans',
+	font-files(
+		'opensans-regular-webfont.svg',
+		'opensans-regular-webfont.woff',
+		'opensans-regular-webfont.woff2',
+		'opensans-regular-webfont.ttf'
+	),
+	'opensans-regular-webfont.eot',
+	normal,
+	normal
+);
+
+@include font-face(
+	'OpenSansExtraBold',
+	font-files(
+		'opensans-extrabold-webfont.svg',
+		'opensans-extrabold-webfont.woff',
+		'opensans-extrabold-webfont.woff2',
+		'opensans-extrabold-webfont.ttf'
+	),
+	'opensans-extrabold-webfont.eot',
+	normal,
+	normal
+);
+
+@include font-face(
+	'OpenSansSemiBold',
+	font-files(
+		'opensans-semibold-webfont.svg',
+		'opensans-semibold-webfont.woff',
+		'opensans-semibold-webfont.woff2',
+		'opensans-semibold-webfont.ttf'
+	),
+	'opensans-semibold-webfont.eot',
+	normal,
+	normal
+);
+
+//----------------------------------------
+//-------------VARIABLES------------------
+//----------------------------------------
+
+$f_main: "OpenSans", sans-serif;
+$f_extrabold: "OpenSansExtraBold", sans-serif;
+$f_semibold: "OpenSansSemiBold", sans-serif;

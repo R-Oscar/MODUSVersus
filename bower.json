@@ -1,0 +1,8 @@
+{
+  "name": "project1",
+  "version": "1.0",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome": "fontawesome#^4.5.0"
+  }
+}

@@ -1,0 +1,32 @@
+- var info_menu = ['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Features', 'Contacts']
+- var portfolio_items = ['Project1', 'Project2', 'Project3']
+
+nav.navbar.navbar-default
+    .container
+        .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle Navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href='#') MODUS
+                span.navbar-brand__light-weight versus
+        .collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+                each item in info_menu
+                    if item == 'Portfolio'
+                        li.dropdown
+                            a(href="#").dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                i.fa.fa-angle-down.custom-caret
+                                | #{item}
+                            ul.dropdown-menu
+                                each dd_item in portfolio_items
+                                    li
+                                        a(href="#") #{dd_item}
+
+                    else
+                        li
+                            a(href='#') #{item}
+                li
+                    a(href="#")
+                        i.fa.fa-search
