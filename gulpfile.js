@@ -71,7 +71,7 @@ pipes.assembleVendorJS = function() {
 
 pipes.assembleVendorCSS = function() {
 	console.log("Assembling vendor.css...");
-	return gulp.src(bowerFiles("**/*.css").concat(["app/bower/jquery-ui/themes/base/jquery-ui.css", "app/bower/select2/dist/css/select2.css"]))
+	return gulp.src(bowerFiles("**/*.css"))
 				.pipe(plugins.concat('vendor.css'))
 				.pipe(gulp.dest(devPaths.stylesFolder));
 }

@@ -1,0 +1,28 @@
+.container-fluid
+	#modusCarousel.carousel.slide(data-ride="carousel")
+		ol.carousel-indicators
+			li.active(data-target="#modusCarousel", data-slide-to="0")
+			- var n = 1
+			while n < 4
+				li(data-target="#modusCarousel", data-slide-to= n++)
+
+		.carousel-inner(role="listbox")
+			.item.active
+				img(src="../images/landscape-04.jpg", alt="Landscape1")
+				.carousel-caption
+					h3 Chania
+					p The atmosphere in Chania has a touch of Florence and Venice.
+			.item
+				img(src="../images/nature-landscape-beautiful-photos-best-desktop-landscape-hd-wallpapers-widescreen-5.jpg", alt="Landscape2")
+			.item
+				img(src="../images/Beautiful-Landscape-Wallpapers.jpg", alt="Landscape3")
+			.item
+				img(src="../images/Landscape.jpg", alt="Landscape4")
+
+		a(href="#modusCarousel", role="button", data-slide="prev").left.carousel-control
+			span.fa.fa-angle-double-left.carousel-arrow(aria-hidden="true")
+			span.sr-only Previous
+		a(href="#modusCarousel", role="button", data-slide="next").right.carousel-control
+			span.fa.fa-angle-double-right.carousel-arrow(aria-hidden="true")
+			span.sr-only Next
+

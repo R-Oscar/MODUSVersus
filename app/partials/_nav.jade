@@ -16,7 +16,7 @@ nav.navbar.navbar-default
                 each item in info_menu
                     if item == 'Portfolio'
                         li.dropdown
-                            a(href="#").dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                            a(href="#", data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false').dropdown-toggle
                                 i.fa.fa-angle-down.custom-caret
                                 | #{item}
                             ul.dropdown-menu
@@ -30,3 +30,4 @@ nav.navbar.navbar-default
                 li
                     a(href="#")
                         i.fa.fa-search
+                        span.sr-only Search

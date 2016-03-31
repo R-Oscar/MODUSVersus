@@ -5,3 +5,8 @@
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass";
 @import "../../bower_components/font-awesome/scss/font-awesome";
 @import "sections/nav";
+@import "sections/carousel";
+
+.container-fluid {
+	padding: 0;
+}
