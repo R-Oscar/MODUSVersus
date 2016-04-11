@@ -1,0 +1,17 @@
+@mixin custom-button($color, $font-size) {
+	outline: none;
+	border: none;
+	background-color: $color;
+	color: #fff;
+	font-size: $font-size;
+	font-family: $f_semibold;
+
+	@include size(200px, 50px);
+	@include box-shadow(0px $link_shadow_height 0px darken($color, 10%));
+	@include border-radius($border-radius-base);
+	@include transition-duration(.25s);
+
+	&:hover {
+		background-color: darken($color, 10%);
+	}
+}

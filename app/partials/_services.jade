@@ -1,0 +1,18 @@
+-
+	var services = [
+		["fa-thumbs-o-up", "Suspendisse", "Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc."],
+		["fa-key", "MAECENAS", "Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo."],
+		["fa-flag", "ALIQUAM", "Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non."],
+		["fa-flask", "HABITASSE", "Astehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non."]
+	]
+
+section.services
+	.services-container
+		each service in services
+			.services-container-inner
+				.services-block
+					.services-header
+						i.fa(class="#{service[0]}")
+						h5= service[1]
+						p= service[2]
+					button.services-button read more

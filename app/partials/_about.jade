@@ -1,0 +1,68 @@
+-
+	var images = [
+		["http://ss.sport-express.ru/userfiles/materials/51/516977/large.jpg", "Berdyev facepalm"],
+		["http://ss.sport-express.ru/userfiles/materials/51/517460/large.jpg", "Real got fucked"],
+		["http://ss.sport-express.ru/userfiles/materials/51/517438/large.jpg", "Gareth Bale"]
+	]
+
+- var items = ["Quisque at massa ipsum", "Maecenas a lorem augue, egestas", "Cras vitae felis at lacus eleifend", "Etiam auctor diam pellentesque", "Nulla ac massa at dolor", "Condimentum eleifend vitae vitae"]
+
+-
+	var stats = [
+		["50", "Suspendisse"],
+		["70", "Maecenas"],
+		["80", "Aliquam"],
+		["100", "Habitasse"]
+	]
+
+section.about
+	.about-header
+		h2 Why Modus Versus?
+		p Capacitance cascading integer reflective interface data development high bus cache dithering transponder.
+	.about-main
+		.about-main-container
+			.about-img
+				each image in images
+					.about-img-col
+						a(href="#").about-img-container
+							.about-img-container__circle-container
+								.about-img-container__circle
+								.about-img-container__circle
+								.about-img-container__circle
+							.about-img-container__minimize
+							img(src="#{image[0]}", alt="#{image[1]}").about-img__responsive
+			.about-content
+				.about-why-choose-us
+					h5 Why Choose Us?
+					ul.about-list
+						each item in items
+							li.about-list__item= item
+				.about-comment
+					h5 What Clients Say?
+					blockquote
+						p Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum
+						footer John Doe
+				.about-stats
+					p Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus <a href="#">vehicula mattis</a>. Nulla ac massa at dolor condimentum eleifend vitae vitae urna.
+					ul.about-stats-list
+						each stat in stats
+							- var value = -45 + stat[0] / 100 * 180;
+							li.about-stats-list__item= stat[1]
+								.about-stats-circle-container
+									.about-stats-circle(style="transform: rotate(#{value}deg);")
+									.about-stats-circle-value= stat[0]
+			.about-hc
+				.about-hc-heading
+					h5 Our Happy Clients
+				.about-hc-line
+				.about-hc-buttons
+					button.about-hc-button
+						i.fa.fa-chevron-left
+					button.about-hc-button
+						i.fa.fa-chevron-right
+			ul.clients-list
+				- for (var i = 0; i < 6; i++) {
+					li.clients-list__item
+						a(href="#").clients-list__link
+							img(src="../images/jquery.png" alt="JQuery").clients-list__image
+				- }

@@ -8,6 +8,16 @@ $link_lh: 15px;
 $link_shadow_height: 3px;
 $dd_menu_width: 200px;
 //-----------------
+// CAROUSEL VARIABLES
+$c_capture_fz: 16px;
+$c_arrow_width: 50px;
+$c_arrow_height: 60px;
+$c_capture_side_padding: 36px;
+$c_multiplier: 0.4;
+//-----------------
+// SERVICES VARIABLES
+$s_shadow: #e5e6e6;
+//-----------------
 //---------------------------------------------------
 $bootstrap-sass-asset-helper: false !default;
 //
@@ -38,38 +48,49 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+// CHANGED $body-bg:               #fff !default;
+$body-bg:               #f3f3f3 !default;
 //** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
+// CHANGED $text-color:            $gray-dark !default;
+$text-color:            #777 !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+// CHAGED $link-color:            $brand-primary !default;
+$link-color:            #e1524b !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
-$link-hover-decoration: underline !default;
+// CHANGED $link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+// CHANGED DELETED $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// CHANGED DELETED $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+// CHANGED DELETED $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+// CHANGED $font-family-base:        $font-family-sans-serif !default;
+$font-family-base:        $f_main !default;
 
 // CHANGED $font-size-base:          14px !default;
 $font-size-base:          13px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5:            $font-size-base !default;
+// CHANGED:
+// $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h1:            50px !default; // ~36px
+// $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h2:            40px !default; // ~30px
+// $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h3:            30px !default; // ~24px
+// $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h4:            20px !default; // ~18px
+// CHANGED $font-size-h5:            $font-size-base !default;
+$font-size-h5:            16px !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
@@ -119,7 +140,8 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        4px !default;
+// CHANGED $border-radius-base:        4px !default;
+$border-radius-base:        5px !default;
 $border-radius-large:       6px !default;
 $border-radius-small:       3px !default;
 
@@ -405,7 +427,7 @@ $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
 // CHANGED $navbar-default-toggle-hover-bg:           #ddd !default;
-$navbar-default-toggle-hover-bg:           darken($navbar-default-bg, 15%) !default;
+$navbar-default-toggle-hover-bg:           $navbar-default-link-hover-bg !default;
 // CHANGED $navbar-default-toggle-icon-bar-bg:        #888 !default;
 $navbar-default-toggle-icon-bar-bg:        #fff !default;
 // CHANGED $navbar-default-toggle-border-color:       #ddd !default;
@@ -508,11 +530,16 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 //
 //##
 
-$jumbotron-padding:              30px !default;
-$jumbotron-color:                inherit !default;
-$jumbotron-bg:                   $gray-lighter !default;
-$jumbotron-heading-color:        inherit !default;
-$jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
+// CHANGED $jumbotron-padding:              30px !default;
+$jumbotron-padding:              25px !default;
+// CHANGED $jumbotron-color:                inherit !default;
+$jumbotron-color:                #777 !default;
+// CHANGED $jumbotron-bg:                   $gray-lighter !default;
+$jumbotron-bg:                   #ececec !default;
+// CHANGED $jumbotron-heading-color:        inherit !default;
+$jumbotron-heading-color:        #7f8c8c !default;
+// CHANGED $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
+$jumbotron-font-size:            $font-size-base !default;
 $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 
 
@@ -880,7 +907,8 @@ $headings-small-color:        $gray-light !default;
 //** Blockquote small color
 $blockquote-small-color:      $gray-light !default;
 //** Blockquote font size
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
+// CHANGED $blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-font-size:        $font-size-base !default;
 //** Blockquote border color
 $blockquote-border-color:     $gray-lighter !default;
 //** Page header border color

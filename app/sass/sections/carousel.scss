@@ -3,17 +3,21 @@
 }
 
 .carousel-inner {
-	width: 100%;
-	max-height: 500px;
+	.item {
+		& > img {
+			height: 500px;
+			width: 100%;
+		}
+	}
 }
 
 .carousel-control {
-	font-size: 40px;
+	font-size: $font-size-h2;
 	bottom: auto;
 	top: 50%;
 	opacity: 1;
-	width: 50px;
-	height: 60px;
+	width: $c_arrow_width;
+	height: $c_arrow_height;
 	background-color: $navbar-default-link-hover-bg;
 	// background-color: $navbar-link-shadow;
 	@include box-shadow(0px $link_shadow_height 0px $navbar-link-shadow);
@@ -22,6 +26,18 @@
 	&:hover {
 		color: $navbar-default-link-color;
 		opacity: 1;
+	}
+
+	@media (max-width: $screen-sm-min) {
+		font-size: $font-size-h2 * 0.7;
+		width: $c_arrow_width * 0.7;
+		height: $c_arrow_height * 0.7;
+	}
+
+	@media (max-width: $screen-xs-min) {
+		font-size: $font-size-h2 * 0.5;
+		width: $c_arrow_width * 0.5;
+		height: $c_arrow_height * 0.5;
 	}
 }
 
@@ -47,5 +63,60 @@
 
 	.active {
 		background-color: $navbar-link-shadow;
+	}
+}
+
+.carousel-caption {
+	width: 470px;
+	left: 50%;
+	top: 50%;
+	right: auto;
+	bottom: auto;
+	@include translate(-50%, -50%);
+	@include text-shadow(none);
+
+	& > h1 {
+		text-transform: uppercase;
+		font-family: $f_extrabold;
+		background-color: $navbar-link-shadow;
+		display: inline-block;
+		padding-left: 11px;
+		padding-right: 11px;
+		@include border-radius($border-radius-base);
+
+		@media (max-width: $screen-sm-min) {
+			font-size: $font-size-h1 * 0.7;
+		}
+
+		@media (max-width: $screen-xs-min) {
+			font-size: $font-size-h1 * 0.5;
+		}
+	}
+
+	& > p {
+		background-color: rgba(0, 0, 0, 0.5);
+		font-size: $c_capture_fz;
+		padding: 5px $c_capture_side_padding 9px;
+		@include border-radius($border-radius-base);
+
+		@media (max-width: $screen-sm-min) {
+			font-size: $c_capture_fz * $multiplier;
+			padding-left: $c_capture_side_padding * 0.5;
+			padding-right: $c_capture_side_padding * 0.5;
+		}
+
+		@media (max-width: $screen-xs-min) {
+			font-size: $c_capture_fz * $multiplier;
+			padding-left: $c_capture_side_padding * $c_multiplier;
+			padding-right: $c_capture_side_padding * $c_multiplier;
+		}
+	}
+
+	@media (max-width: $screen-sm-min) {
+		width: 470px * 0.75;
+	}
+
+	@media (max-width: $screen-xs-min) {
+		width: 470px * $c_multiplier;
 	}
 }

@@ -12,6 +12,19 @@
 );
 
 @include font-face(
+	'OpenSans',
+	font-files(
+		'opensans-italic-webfont.svg',
+		'opensans-italic-webfont.woff',
+		'opensans-italic-webfont.woff2',
+		'opensans-italic-webfont.ttf'
+	),
+	'opensans-italic-webfont.eot',
+	normal,
+	italic
+);
+
+@include font-face(
 	'OpenSansExtraBold',
 	font-files(
 		'opensans-extrabold-webfont.svg',
@@ -34,6 +47,32 @@
 	),
 	'opensans-semibold-webfont.eot',
 	normal,
+	normal
+);
+
+@include font-face(
+	'OpenSansSemiBold',
+	font-files(
+		'opensans-semibolditalic-webfont.svg',
+		'opensans-semibolditalic-webfont.woff',
+		'opensans-semibolditalic-webfont.woff2',
+		'opensans-semibolditalic-webfont.ttf'
+	),
+	'opensans-semibolditalic-webfont.eot',
+	normal,
+	italic
+);
+
+@include font-face(
+	'OpenSans',
+	font-files(
+		'opensans-bold-webfont.svg',
+		'opensans-bold-webfont.woff',
+		'opensans-bold-webfont.woff2',
+		'opensans-bold-webfont.ttf'
+	),
+	'opensans-bold-webfont.eot',
+	bold,
 	normal
 );
 

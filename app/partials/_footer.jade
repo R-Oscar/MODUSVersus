@@ -1,0 +1,71 @@
+- var company_items = ["About", "FAQ", "Contact", "Terms", "Privacy", "Testimonials"]
+- var community_items = ["Blog", "Forum", "Support", "Newsletter"]
+
+footer.footer
+	.footer-container
+		.footer-main
+			.footer-contacts
+				h3 Modus
+					span.footer-small Versus
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique id et eligendi, a error quod.
+
+				table.contacts-table
+					tr
+						td.contacts-field Phone
+						td.contacts-value 182 2569 5896
+					tr
+						td.contacts-field e-mail
+						td.contacts-value info@modus.versus
+
+			.company-container
+				h4 Company
+				ul.company-list
+					each item in company_items
+						li.company-list__item
+							a(href="#")= item
+
+			.community-container
+				h4 Community
+				ul.community-list
+					each item in community_items
+						li.community-list__item
+							a(href="#")= item
+			
+			.blog-container
+				h4 
+					span.footer-italic From the 
+					| blog
+				ul.blog-list
+					li.blog-list__item
+						a(href="#").blog-list__link
+							.blog-list__image-col
+								span.blog-list__image-container
+									.blog-list__image
+										i.fa.fa-picture-o.fa-2x
+							.blog-feed
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto?
+								p.blog-date 26 May, 2013
+					li.blog-list__item
+						a(href="#").blog-list__link
+							.blog-list__image-col
+								span.blog-list__image-container
+									.blog-list__image
+										i.fa.fa-picture-o.fa-2x
+							.blog-feed
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto?
+								p.blog-date 26 May, 2013
+
+footer.footer-bottom
+	.footer-bottom-container
+		.footer-bottom-row
+			.footer-bottom-left 2016 ModusVersus
+			.footer-bottom-right
+				ul.footer-socials
+					li.footer-socials__item
+						i.fa.fa-facebook.fa-2x
+					li.footer-socials__item
+						i.fa.fa-google-plus.fa-2x
+					li.footer-socials__item
+						i.fa.fa-twitter.fa-2x
+					li.footer-socials__item
+						i.fa.fa-rss.fa-2x

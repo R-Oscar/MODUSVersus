@@ -1,0 +1,32 @@
+.intro {
+	@include container-fixed();
+}
+
+.jumbotron {
+	padding: $jumbotron-padding;
+	padding-right: 35px;
+	padding-left: 30px;
+	margin-bottom: 0;
+
+	& > h3 {
+		color: $jumbotron-heading-color;
+		font-family: $f_semibold;
+		margin: 0;
+	}
+
+	& > p {
+		margin: 0;
+	}
+}
+
+.j-button {
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
+	@include custom-button($navbar-default-link-hover-bg, 20px);
+
+	@media (max-width: $screen-md-min) {
+		margin: 0 auto;
+	}
+}
